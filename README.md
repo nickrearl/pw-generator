@@ -5,7 +5,7 @@ This is a project to develop a randomly generated password using javascript.
 This will allow users to generate a secure password by selecting how many characters it needs to be, and what mix of uppercase letters, lowercase letters, and special characters is needed.
 
 ## Live Site
-INSERT LIVE LINK HERE
+https://nickrearl.github.io/pw-generator/
 
 ![alt text](./assets/images/03-javascript-homework-demo.png)
 
