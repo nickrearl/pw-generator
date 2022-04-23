@@ -32,73 +32,52 @@ var generatePassword = function() {
   }
 
   var pwProperties = {
-    length: pwLength,
+
     numbers: pwNumbers,
     upperCase: pwUpperCase,
     lowerCase: pwLowerCase,
     specialCharacters: pwSpecialCharacters,
   }
 
-  for (placeholder in pwProperties) {
-    console.log(pwProperties[placeholder])
+  var pwValues = []
+
+  if (pwProperties.numbers == true){
+    for(let i = 48; i < 58; i++){
+      pwValues.push(i)
+    }
   }
 
-  // if (pwNumbers && pwUpperCase && pwLowerCase && pwSpecialCharacters){
-  //   return "a"
-  // }
+  if (pwProperties.upperCase == true){
+    for(let i = 65; i < 91; i ++){
+      pwValues.push(i)
+    }
+  }
 
-  // else if (pwNumbers && pwUpperCase && pwLowerCase && !pwSpecialCharacters){
-  //   return "b"
-  // }
+  if (pwProperties.lowerCase == true){
+    for(let i = 97; i < 123; i ++){
+      pwValues.push(i)
+    }
+  }
 
-  // else if (pwNumbers && pwUpperCase && !pwLowerCase && pwSpecialCharacters){
-  //   return "c"
-  // }
+  if (pwProperties.specialCharacters == true){
+    for(let i = 33; i < 48; i ++){
+      pwValues.push(i)
+    }
 
-  // else if (pwNumbers && !pwUpperCase && pwLowerCase && pwSpecialCharacters){
-  //   return "d"
-  // }
+    for(let i = 58; i < 64; i ++){
+      pwValues.push(i)
+    }
 
-  // else if (pwNumbers && pwUpperCase && !pwLowerCase && !pwSpecialCharacters){
-  //   return "e"
-  // }
+    for(let i = 90; i < 97; i ++){
+      pwValues.push(i)
+    }
 
-  // else if (pwNumbers && !pwUpperCase && !pwLowerCase && !pwSpecialCharacters){
-  //   return "f"
-  // }
+    for(let i = 123; i < 127; i ++){
+      pwValues.push(i)
+    }
+  }
 
-  // else if (pwNumbers && !pwUpperCase && pwLowerCase && !pwSpecialCharacters){
-  //   return "g"
-  // }
 
-  // else if (pwNumbers && !pwUpperCase && !pwLowerCase && pwSpecialCharacters){
-  //   return "h"
-  // }
-
-  // else if (!pwNumbers && pwUpperCase && pwLowerCase && pwSpecialCharacters){
-  //   return "i"
-  // }
-
-  // else if (!pwNumbers && !pwUpperCase && pwLowerCase && pwSpecialCharacters){
-  //   return "j"
-  // }
-
-  // else if (!pwNumbers && !pwUpperCase && !pwLowerCase && pwSpecialCharacters){
-  //   return "k"
-  // }
-
-  // else if (!pwNumbers && pwUpperCase && pwLowerCase && !pwSpecialCharacters){
-  //   return "l"
-  // }
-
-  // else if (!pwNumbers && pwUpperCase && !pwLowerCase && pwSpecialCharacters){
-  //   return "m"
-  // }
-
-  // else {
-  //   window.alert("Please enter valid password criteria");
-    
-  // }
 }
 
 // Add event listener to generate button
