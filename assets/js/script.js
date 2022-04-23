@@ -77,7 +77,14 @@ var generatePassword = function() {
     }
   }
 
+  var finalPw = ""
 
+  for (let i = 0; i < pwLength; i++){
+    var randomIndex = Math.floor(Math.random() * pwValues.length)
+    finalPw +=String.fromCharCode(pwValues[randomIndex])
+  }
+
+  return finalPw
 }
 
 // Add event listener to generate button
