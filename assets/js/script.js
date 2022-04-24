@@ -13,9 +13,12 @@ function writePassword() {
 var generatePassword = function() {
   var pwLength = window.prompt("How long would you like your password to be?"); // between 8 and 128
 
-  while (pwLength < 8 || pwLength > 128 ){
-    window.alert("Please eneter a value between 8 and 128")
+  parseInt(pwLength);
+
+  while (pwLength < 8 || pwLength > 128 || isNaN(pwLength)){
+    window.alert("Please eneter a whole number between 8 and 128")
     pwLength = window.prompt("How long would you like your password to be?")
+    parseInt(pwLength)
   }
 
   var pwNumbers = window.confirm("Would you like your password to include numbers?") // true or false
